@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
         //Задача 1-2
@@ -21,6 +23,9 @@ public class Main {
                 } else if (clientYear > checkyear) {
                     System.out.println("Установите обычную версию приложения для android по ссылке");
                 }
+            } else if (clientOs > 2) {
+                System.out.println("Ваша OC не поддерживается");
+
             }
         }
         //Задача 3
@@ -32,18 +37,17 @@ public class Main {
                 }
         //Задача 4
 
-        int deliveryDistance = 95;
+        int deliveryDistance = 20;
         if (deliveryDistance <= 20){
             System.out.println("Потребуется дней для доставки: 1");
         }
-        else if (deliveryDistance > 20 && deliveryDistance < 60){
+        if  (deliveryDistance > 20 && deliveryDistance < 60){
             System.out.println("Потребуется дней для доставки: 2");
         }
-        else if (deliveryDistance > 60 && deliveryDistance <= 100){
-
+        if  (deliveryDistance >= 60 && deliveryDistance < 100){
+            System.out.println("Потребуется дней для доставки: 3");
         }
-        System.out.println("Потребуется дней для доставки: 3");
-             if (deliveryDistance > 100) {
+        if (deliveryDistance > 100) {
                 System.out.println("Доставки нет");
             }
 
@@ -69,6 +73,7 @@ public class Main {
             case 10:
             case 11:
                 System.out.println("Весна");
+                break;
             default:
                 System.out.println("Введите число от 1 до 12");
         }
